@@ -1,5 +1,5 @@
 import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google'
-import { Profile } from './components'
+import { Desk, Profile } from './components'
 import { useLoginMutation, useCheckAuthQuery } from './store/queries'
 
 export const App = () => {
@@ -13,7 +13,7 @@ export const App = () => {
   return (
     <GoogleOAuthProvider clientId={process.env.GOOGLE_CLIENT_ID!}>
       {data ? (
-        <Profile />
+        <Desk />
       ) : (
         <GoogleLogin
           useOneTap
