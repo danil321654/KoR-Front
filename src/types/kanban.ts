@@ -1,6 +1,7 @@
 export interface Card {
   id: string
   title: string
+  description: string
   color: string
 }
 
@@ -16,3 +17,10 @@ export interface Kanban {
 }
 
 export type KanbanColumn = keyof Kanban
+
+export interface MoveActionPayload {
+  cardId: Card['id']
+  from: KanbanColumn
+  to: KanbanColumn
+  toPosition: number
+}

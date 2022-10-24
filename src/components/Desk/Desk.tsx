@@ -9,7 +9,15 @@ export const Desk = () => {
   ) as KanbanColumn[]
 
   return (
-    <Grid container justifyContent="space-around">
+    <Grid
+      container
+      justifyContent="space-around"
+      alignItems="stretch"
+      wrap="nowrap"
+      height="100vh"
+      gap={3}
+      p={3}
+    >
       {columns.map((column) => (
         <CardColumn column={column} key={column} />
       ))}
